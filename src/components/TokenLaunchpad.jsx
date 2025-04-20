@@ -31,6 +31,11 @@ export function TokenLaunchpad() {
 
 	const createToken = async () => {
 		// console.log(name , symbol , imageUrl , decimals, supply);
+		if (!wallet.publicKey) {
+			alert("Please connect your wallet first");
+			return;
+		}
+
 		try {
 			const mintAccount = Keypair.generate();
 
@@ -129,11 +134,11 @@ export function TokenLaunchpad() {
 			alert(
 				`Minted ${supply} tokens of ${symbol} for ${wallet.publicKey.toBase58()}`
 			);
-            setName("");
-            setSymbol("");
-            setSupply(0);
-            setDecimals(9);
-            setImageUrl("");
+			setName("");
+			setSymbol("");
+			setSupply(0);
+			setDecimals(9);
+			setImageUrl("");
 		} catch (e) {
 			alert("Error while creating and minting token : " + e.message);
 			console.log("Error : ", e.message);
