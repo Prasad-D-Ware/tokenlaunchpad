@@ -8,6 +8,7 @@ import {
 import "@solana/wallet-adapter-react-ui/styles.css";
 import { useState } from "react";
 import MintToken from "./components/MintToken";
+import Stake from "./components/StakeSol";
 
 function App() {
 	const [tab, setTab] = useState(0);
@@ -27,6 +28,7 @@ function App() {
 							>
 								<button onClick={() => setTab(1)}>LAUNCH TOKEN</button>
 								<button onClick={() => setTab(2)}>MINT TOKENS</button>
+								<button onClick={() => setTab(3)}>STAKE SOL</button>
 							</div>
 						</div>
 					)}
@@ -48,6 +50,16 @@ function App() {
 						>
 							<button onClick={() => setTab(0)}>HOME</button>
 							<MintToken />
+						</div>
+					)}
+					{tab === 3 && (
+						<div
+							style={{
+								paddingTop: "30px",
+							}}
+						>
+							<button onClick={() => setTab(0)}>HOME</button>
+							<Stake />
 						</div>
 					)}
 				</WalletModalProvider>
