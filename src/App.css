@@ -13,3 +13,24 @@
 .btn {
   padding: 20px;
 }
+
+.stake-unstake-container {
+  display: flex;
+  gap: 100px;
+  margin-top: 30px;
+}
+.stake-unstake-section {
+  min-width: 250px;
+  max-width: 350px;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .stake-unstake-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .stake-unstake-section {
+    max-width: 90vw;
+  }
+}
