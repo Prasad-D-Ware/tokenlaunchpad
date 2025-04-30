@@ -165,7 +165,20 @@ export function TokenLaunchpad() {
 				<WalletMultiButton />
 				<WalletDisconnectButton />
 			</div>
-			<h1>Solana Token Launchpad</h1>
+			<div>
+				<h1>Solana Token Launchpad</h1>
+				<h3>
+					Launch Your{" "}
+					<span
+						style={{
+							color: "red",
+						}}
+					>
+						Devnet
+					</span>{" "}
+					Token
+				</h3>
+			</div>
 			<input
 				className="inputText"
 				type="text"

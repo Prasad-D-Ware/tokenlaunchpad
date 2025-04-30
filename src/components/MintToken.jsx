@@ -96,7 +96,19 @@ const MintToken = () => {
 				<WalletMultiButton />
 				<WalletDisconnectButton />
 			</div>
-			<h1>Solana Token Mint</h1>
+			<div>
+				<h1>Solana Token Mint</h1>
+				<h3>
+					Mint Tokens you{" "}
+					<span
+						style={{
+							color: "green",
+						}}
+					>
+						OWN on Devnet
+					</span>{" "}
+				</h3>
+			</div>
 			<input
 				className="inputText"
 				type="text"
